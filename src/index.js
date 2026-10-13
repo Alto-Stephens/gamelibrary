@@ -7,7 +7,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
-    <h1>Midnight Arcade Library</h1>
   </React.StrictMode>
 );
 

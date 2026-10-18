@@ -1,10 +1,14 @@
-import "./Header.css";
+import Brand from "./Brand";
+import MainNavigation from "./MainNavigation";
+import "./header.css";
 
 const Header = () => {
     return (
-        <header>
-            <h1>Midnight Arcade</h1>
+        <header className="main-header">
+            <Brand />
+            <MainNavigation />
         </header>
     );
 };
+
 export default Header;

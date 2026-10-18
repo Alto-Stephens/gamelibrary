@@ -1,6 +1,7 @@
 {
   "name": "/frontend",
   "version": "0.1.0",
+  "homepage": "https://alto-stephens.github.io/gamelibrary",
   "private": false,
   "dependencies": {
     "@testing-library/dom": "^10.4.2",

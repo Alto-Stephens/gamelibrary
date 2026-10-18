@@ -1,4 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  /*update to what my site uses (fonts, colors, etc)*/
+  min-width: 320px;
+  margin: 0;
   font-family: "Roboto", Arial, sans-serif;
+  color: #fff0ff;
+  background: #090610;
+}
+
+#root {
+  min-height: 100vh;
 }

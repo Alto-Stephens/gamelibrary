@@ -1,0 +1,425 @@
+.home-shell {
+  --home-bg: #09080f;
+  --home-pink: #ff4ec4;
+  --home-blue: #5fe7ff;
+  --home-yellow: #ffdc5a;
+  --home-text: #f8eefb;
+  --home-muted: #c5b4d8;
+  width: min(1200px, calc(100% - 40px));
+  margin: 24px auto;
+  overflow: hidden;
+  border: 1px solid rgba(255, 130, 240, 0.18);
+  background: linear-gradient(180deg, rgba(18, 8, 26, 0.98), rgba(17, 6, 28, 0.98));
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+.home-hero {
+  position: relative;
+  display: grid;
+  min-height: clamp(340px, 48vw, 520px);
+  place-items: end center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background:
+    linear-gradient(180deg, rgba(247, 174, 61, 0.32), rgba(108, 0, 86, 0.66)),
+    url("https://cdn.mos.cms.futurecdn.net/tyRW8w6oRrzerPcDER5Sce.jpg") center 42% / cover no-repeat;
+}
+
+.home-hero::before {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(14, 7, 22, 0.08), rgba(9, 5, 16, 0.48)),
+    linear-gradient(rgba(255, 0, 150, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 150, 0.1) 1px, transparent 1px);
+  background-size: auto, 20px 20px, 20px 20px;
+  content: "";
+  pointer-events: none;
+}
+
+.home-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 16px 48px;
+  text-align: center;
+}
+
+.home-hero-content > p,
+.home-eyebrow {
+  color: var(--home-yellow);
+  font: 9px/1.7 "Press Start 2P", monospace;
+  letter-spacing: 0.14em;
+  text-shadow: 0 0 14px rgba(255, 209, 102, 0.75);
+}
+
+.home-hero-content h1 {
+  display: flex;
+  flex-direction: column;
+  margin: 14px 0 0;
+  color: var(--home-pink);
+  font: clamp(25px, 5.5vw, 62px)/1.2 "Press Start 2P", monospace;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 16px rgba(255, 78, 196, 0.7), 0 0 26px rgba(255, 78, 196, 0.5);
+}
+
+.home-intro {
+  max-width: 720px;
+  margin: 26px auto 20px;
+  padding: 0 16px;
+  color: #e8dff1;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.home-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 18px;
+  padding: 0 20px;
+  margin: 0 auto 28px;
+}
+
+.home-tags a {
+  color: var(--home-pink);
+  font: 8px/1.8 "Press Start 2P", monospace;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-shadow: 0 0 8px rgba(255, 79, 196, 0.25);
+}
+
+.home-tags a::before {
+  padding-right: 8px;
+  color: var(--home-pink);
+  content: "•";
+}
+
+.home-tags a:hover,
+.home-tags a:focus-visible {
+  color: var(--home-blue);
+}
+
+.home-gallery,
+.home-featured {
+  margin: 0 24px 30px;
+}
+
+.home-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.home-section-heading h2 {
+  margin: 0;
+  color: var(--home-pink);
+  font: 10px/1.7 "Press Start 2P", monospace;
+  letter-spacing: 0.1em;
+}
+
+.home-section-heading > span {
+  color: var(--home-muted);
+  font: 8px "Press Start 2P", monospace;
+}
+
+.home-slideshow {
+  max-width: 840px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(255, 110, 220, 0.24);
+  background: var(--home-bg);
+}
+
+.home-slide {
+  display: block;
+  color: var(--home-text);
+  text-decoration: none;
+}
+
+.home-slide img {
+  display: block;
+  width: 100%;
+  max-height: 440px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.home-slide-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  font-family: "Orbitron", sans-serif;
+}
+
+.home-slide-caption strong {
+  color: var(--home-pink);
+  font-size: 12px;
+}
+
+.home-slide-caption > span {
+  color: var(--home-blue);
+  font-size: 11px;
+}
+
+.home-slide-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  max-width: 840px;
+  margin: 12px auto 0;
+}
+
+.home-slide-controls button {
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 110, 220, 0.42);
+  background: var(--home-bg);
+  color: var(--home-text);
+  font: 8px "Press Start 2P", monospace;
+  cursor: pointer;
+}
+
+.home-slide-controls button:hover {
+  border-color: var(--home-blue);
+  color: var(--home-blue);
+}
+
+.home-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.home-game-card {
+  position: relative;
+  display: flex;
+  min-height: 280px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px 18px 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 125, 220, 0.25);
+  border-top: 3px solid var(--home-pink);
+  background:
+    linear-gradient(180deg, rgba(40, 16, 46, 0.76), rgba(10, 7, 21, 0.96)),
+    var(--game-image) center / cover no-repeat;
+}
+
+.home-game-card-heading {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+
+.home-game-card h3 {
+  margin: 0;
+  color: var(--home-pink);
+  font: 12px/1.6 "Press Start 2P", monospace;
+}
+
+.home-game-card-heading > span {
+  color: rgba(255, 255, 255, 0.8);
+  font: 9px/1.6 "Orbitron", sans-serif;
+}
+
+.home-game-card > p {
+  position: relative;
+  z-index: 1;
+  margin: 16px 0 24px;
+  color: rgba(255, 244, 255, 0.92);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.home-game-card > a,
+.home-contact > a {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-top: auto;
+  padding: 11px 14px;
+  border: 1px solid rgba(255, 97, 194, 0.7);
+  background: rgba(18, 13, 27, 0.82);
+  color: var(--home-pink);
+  font: 8px "Orbitron", sans-serif;
+  letter-spacing: 0.11em;
+  text-decoration: none;
+}
+
+.home-game-card > a:hover,
+.home-contact > a:hover {
+  border-color: var(--home-blue);
+  color: var(--home-blue);
+}
+
+.home-banner {
+  position: relative;
+  display: block;
+  height: clamp(150px, 22vw, 240px);
+  margin: 0 24px 30px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 130, 240, 0.18);
+}
+
+.home-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55) saturate(0.85);
+  transition: filter 180ms ease, transform 180ms ease;
+}
+
+.home-banner:hover img {
+  filter: brightness(0.78) saturate(1);
+  transform: scale(1.02);
+}
+
+.home-banner > span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  color: var(--home-pink);
+  font: clamp(10px, 2vw, 16px) "Press Start 2P", monospace;
+  text-align: center;
+  text-shadow: 0 0 12px #09080f, 0 0 20px #09080f;
+}
+
+.home-contact {
+  margin: 0 24px 30px;
+  padding: 24px;
+  border: 1px solid rgba(255, 130, 240, 0.22);
+  background: linear-gradient(145deg, rgba(29, 17, 48, 0.88), rgba(9, 8, 15, 0.96));
+}
+
+.home-contact .home-eyebrow {
+  margin: 0 0 12px;
+  color: var(--home-blue);
+  font-size: 8px;
+}
+
+.home-contact h2 {
+  margin: 0;
+  color: var(--home-pink);
+  font: 13px/1.7 "Press Start 2P", monospace;
+}
+
+.home-contact > p:not(.home-eyebrow) {
+  max-width: 660px;
+  margin: 12px 0 20px;
+  color: var(--home-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.home-contact > a {
+  margin-top: 0;
+}
+
+.home-footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
+  min-height: 68px;
+  padding: 14px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+  font: 9px/1.6 "Orbitron", sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.home-footer span:last-child {
+  text-align: right;
+}
+
+.home-shell a:focus-visible,
+.home-shell button:focus-visible {
+  outline: 2px solid var(--home-blue);
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .home-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .home-shell {
+    width: 100%;
+    margin: 0 auto;
+    border-right: 0;
+    border-left: 0;
+  }
+
+  .home-hero-content {
+    padding-bottom: 32px;
+  }
+
+  .home-hero-content > p {
+    font-size: 7px;
+  }
+
+  .home-intro {
+    font-size: 15px;
+  }
+
+  .home-tags {
+    gap: 8px 12px;
+  }
+
+  .home-tags a {
+    font-size: 7px;
+  }
+
+  .home-gallery,
+  .home-featured {
+    margin-right: 14px;
+    margin-left: 14px;
+  }
+
+  .home-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-game-card {
+    min-height: 245px;
+  }
+
+  .home-banner {
+    margin-right: 14px;
+    margin-left: 14px;
+  }
+
+  .home-contact {
+    margin-right: 14px;
+    margin-left: 14px;
+    padding: 20px 16px;
+  }
+
+  .home-footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .home-footer span:last-child {
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-banner img {
+    transition: none;
+  }
+}

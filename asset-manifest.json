@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/gamelibrary/static/css/main.b1aa7ba6.css",
-    "main.js": "/gamelibrary/static/js/main.d1985e05.js",
+    "main.css": "/gamelibrary/static/css/main.90ac202a.css",
+    "main.js": "/gamelibrary/static/js/main.30c07926.js",
     "index.html": "/gamelibrary/index.html",
-    "main.b1aa7ba6.css.map": "/gamelibrary/static/css/main.b1aa7ba6.css.map",
-    "main.d1985e05.js.map": "/gamelibrary/static/js/main.d1985e05.js.map"
+    "main.90ac202a.css.map": "/gamelibrary/static/css/main.90ac202a.css.map",
+    "main.30c07926.js.map": "/gamelibrary/static/js/main.30c07926.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1aa7ba6.css",
-    "static/js/main.d1985e05.js"
+    "static/css/main.90ac202a.css",
+    "static/js/main.30c07926.js"
   ]
 }
